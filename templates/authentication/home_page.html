@@ -1,0 +1,244 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/style_page.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+</head>
+<body>
+<div class="bar">
+    <nav>
+        <div class="nav-link" id="navlinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="/home_page">home</a></li>
+                <li><a href="about_us.php">about</a></li>
+                <li><a href="/course">courses</a></li>
+                <li><a href="/platformes">platform</a></li>
+                {% if user.is_authenticated %}
+                <li><button class="signout" type="submit"><a href="/signout">Signout</a></button></li>
+                {% endif %}
+            </ul>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </div>
+    </nav>
+</div>
+    <div class="container">
+        <div class="message-container" >
+        {% if user.is_authenticated %}
+            <br>
+            <h3>Hello {{username}} </h3>
+            <h4>you are succesfuly loged</h4>
+        {% endif %}
+        </div>
+        <h1>Roots of Violence: Insights from Median and Maximum Values</h1>
+        <p>Our data reveals intriguing insights into the underlying causes of violence against women, as indicated by median and maximum values. Surprisingly, common reasons like burning food, refusal of sex, arguments, going out without permission, and neglecting children emerge as key triggers. Among these, at least one specific reason stands out with the highest median value and the absolute maximum percent, underscoring the urgency to address these deeply ingrained societal issues. These findings emphasize the critical need for targeted interventions and support systems to combat violence against women effectively </p>
+    
+    <form id="plotForm" method="get" action="">
+    <div>
+        <label for="category">Category:</label>
+        <select name="category" id="category">
+            <option value="age">Age</option>
+            <option value="education">Education</option>
+            <option value="employment">Employment</option>
+            <option value="marital_status">Marital Status</option>
+            <option value="residence">Residence</option>
+        </select>
+        
+        <label for="statistic">Statistic:</label>
+        <select name="statistic" id="statistic">
+            <option value="max">Max</option>
+            <option value="median">Median</option>
+        </select>
+        
+        <input type="submit" value="Submit">
+    </form>
+    
+    <div id="plotContainer">
+        {{ plot_data|safe }}
+    </div>
+ <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("plotForm").dispatchEvent(new Event("submit"));
+    });
+
+    document.getElementById("plotForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var form = event.target;
+        var category = form.elements["category"].value;
+        var statistic = form.elements["statistic"].value;
+        var iframe = document.createElement("iframe");
+        iframe.src = "{% static 'plotly_plots/' %}" + category + "_" + statistic + ".html";
+        iframe.width = "1350";
+        iframe.height = "600";
+        document.getElementById("plotContainer").innerHTML = "";
+        document.getElementById("plotContainer").appendChild(iframe);
+    });
+</script>
+
+<h1>Exploring Global Impact: Visualizing Violence Against Women Through Maps</h1>
+        <p>
+            Our interactive maps offer a unique insight into the global landscape of violence against women, highlighting regional disparities and trends. These maps provide a visual representation of various indicators, from reported incidents to access to support services, shedding light on the complex challenges faced by women worldwide. Explore the data to gain a deeper understanding of the prevalence and impact of violence against women in different regions, helping to inform advocacy, policy, and support initiatives.<form id="mapForm" method="get" action="">
+    <label for="mapSelector">Select Map:</label>
+    <select id="mapSelector" name="mapSelector">
+        {% for map_name in map_names %}
+            <option value="{{ map_name }}">{{ map_name }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Submit">
+</form>
+<div id="mapContainer"></div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var mapSelector = document.getElementById('mapSelector');
+        var mapContainer = document.getElementById('mapContainer');
+
+        function loadMap(mapName) {
+            var mapFile = "map_" + mapName.replace(" ", "_").toLowerCase() + ".html";
+            var mapPath = "{% static 'plotly_plots/' %}" + mapFile;
+            mapContainer.innerHTML = `<iframe src="${mapPath}" width="100%" height="750px"></iframe>`;
+        }
+
+        loadMap(mapSelector.value);
+
+        document.getElementById('mapForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var selectedMap = mapSelector.value;
+            loadMap(selectedMap);
+        });
+    });
+</script>
+
+
+<h1>Recommended Books</h1>
+    <ul>
+        {% if lien1 and Autor1 and tit1%}
+        <div class="featured_book_card">
+            <div class="featurde_book_img">
+                <img src="{{ lien1 }}" alt="Image">
+            </div>
+            <div class="featurde_book_tag">
+                <h2>book 1</h2>
+                <p class="writer">Title : {{ tit1 }}</p>
+                <p class="writer">Auteur : {{ Autor1 }}</p>
+            </div>               
+        </div>
+        {% endif %}
+
+        {% if lien2 and Autor2 and tit2%}
+        <div class="featured_book_card">
+            <div class="featurde_book_img">
+                <img src="{{ lien2 }}" alt="Image">
+            </div>
+            <div class="featurde_book_tag">
+                <h2>book 2</h2>
+                <p class="writer">Title : {{ tit2 }}</p>
+                <p class="writer">Auteur : {{ Autor2 }}</p>
+            </div>               
+        </div>
+        {% endif %}
+        {% if lien3 and Autor3 and tit1%}
+        <div class="featured_book_card">
+            <div class="featurde_book_img">
+                <img src="{{ lien3 }}" alt="Image">
+            </div>
+            <div class="featurde_book_tag">
+                <h2>book 3</h2>
+                <p class="writer">Title : {{ tit3 }}</p>
+                <p class="writer">Auteur : {{ Autor3 }}</p>
+            </div>               
+        </div>
+        {% endif %}
+        {% if lien4 and Autor4 and tit4%}
+        <div class="featured_book_card">
+            <div class="featurde_book_img">
+                <img src="{{ lien4 }}" alt="Image">
+            </div>
+            <div class="featurde_book_tag">
+                <h2>book 4</h2>
+                <p class="writer">Title : {{ tit4 }}</p>
+                <p class="writer">Auteur : {{ Autor4 }}</p>
+            </div>               
+        </div>
+        {% endif %}
+        {% if lien5 and Autor5 and tit5%}
+        <div class="featured_book_card">
+            <div class="featurde_book_img">
+                <img src="{{ lien5 }}" alt="Image">
+            </div>
+            <div class="featurde_book_tag">
+                <h2>book 5</h2>
+                <p class="writer">Title : {{ tit5 }}</p>
+                <p class="writer">Auteur : {{ Autor5 }}</p>
+            </div>               
+        </div>
+        {% endif %}
+        {% if lien6 and Autor6 and tit6%}
+        <div class="featured_book_card">
+            <div class="featurde_book_img">
+                <img src="{{ lien6 }}" alt="Image">
+            </div>
+            <div class="featurde_book_tag">
+                <h2>book 6</h2>
+                <p class="writer">Title : {{ tit6 }}</p>
+                <p class="writer">Auteur : {{ Autor6 }}</p>
+            </div>               
+        </div>
+        {% endif %}
+        {% if lien1 and Autor7 and tit7%}
+        <div class="featured_book_card">
+            <div class="featurde_book_img">
+                <img src="{{ lien7 }}" alt="Image">
+            </div>
+            <div class="featurde_book_tag">
+                <h2>book 7</h2>
+                <p class="writer">Title : {{ tit7 }}</p>
+                <p class="writer">Auteur : {{ Autor7 }}</p>
+            </div>               
+        </div>
+        {% endif %}
+        {% if lien8 and Autor8 and tit8%}
+        <div class="featured_book_card">
+            <div class="featurde_book_img">
+                <img src="{{ lien8 }}" alt="Image">
+            </div>
+            <div class="featurde_book_tag">
+                <h2>book 8</h2>
+                <p class="writer">Title : {{ tit8 }}</p>
+                <p class="writer">Auteur : {{ Autor8 }}</p>
+            </div>               
+        </div>
+        {% endif %}
+        {% if lien9 and Autor9 and tit9%}
+        <div class="featured_book_card">
+            <div class="featurde_book_img">
+                <img src="{{ lien9 }}" alt="Image">
+            </div>
+            <div class="featurde_book_tag">
+                <h2>book 9</h2>
+                <p class="writer">Title : {{ tit9 }}</p>
+                <p class="writer">Auteur : {{ Autor9 }}</p>
+            </div>               
+        </div>
+        {% endif %}
+        {% if lien0 and Autor0 and tit0%}
+        <div class="featured_book_card">
+            <div class="featurde_book_img">
+                <img src="{{ lien0 }}" alt="Image">
+            </div>
+            <div class="featurde_book_tag">
+                <h2>book 10</h2>
+                <p class="writer">Title : {{ tit0 }}</p>
+                <p class="writer">Auteur : {{ Autor0 }}</p>
+            </div>               
+        </div>
+        {% endif %}
+    </ul>
+    
+</body>
+</html>

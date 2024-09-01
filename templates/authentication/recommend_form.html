@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Recommendation Form</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        Title: <input type="text" name="title"><br>
+        Genre: <input type="text" name="genre"><br>
+
+        <input type="submit" value="Get Recommendations">
+    </form>
+</body>
+</html>

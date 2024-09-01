@@ -1,0 +1,192 @@
+body {
+    font-family: 'Georgia', serif; /* Updated font-family for a more professional look */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Add padding to the top of the body to ensure content starts below the fixed navbar */
+h1{
+    margin-bottom: 20px;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container {
+    max-width: 1590px;
+    padding: 40px;
+    margin-bottom: 10px;
+    
+}
+.bar {
+    background-color: #4628DD;
+    color: #ffffff;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+}
+.nav-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%; /* Ensure it spans the full width */
+    margin: 0 auto; /* Center the nav-link container */
+    padding: 0; /* Remove padding to ensure it spans the full width */
+}
+.nav-link ul {
+    list-style-type: none;
+    margin: 0;
+    padding-top:10px ;
+    padding-bottom: 10px;
+    display: flex;
+    width: 100%; /* Ensure the list spans the full width */
+    justify-content: flex-end; /* Align items to the right */
+}
+.nav-link ul li {
+    margin-right: 35px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.nav-link ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.signout{
+    /* Your styles for the signout button */
+    background-color: #ff0000; /* Example background color */
+    color: #fff; /* Example text color */
+    border: none; /* Example border */
+    padding: 10px 20px; /* Example padding */
+    border-radius: 5px; /* Example border radius */
+}
+
+
+.nav-link ul li a:hover {
+    color: #e0aff1;
+}
+/* Map Section Styles */
+#mapContainer {
+    margin-top: 30px;
+}
+
+/* Form Styles */
+form {
+    margin-bottom: 30px;
+}
+
+label {
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+select,
+input[type="submit"] {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 200px;
+}
+
+input[type="submit"] {
+    background-color: #41b168;
+    color: #fff;
+    border: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 28px;
+    line-height: 2;
+    margin-bottom: 30px;
+    font-family: "Gill Sans Extrabold", sans-serif; font-weight: 200px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-link {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .nav-link ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-link ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    select,
+    input[type="submit"] {
+        width: 100%;
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: 100px; 
+    }
+}
+
+.featured_book_card {
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    transition: background-color 0.3s ease;
+    border: 1px solid #000; /* Add border property */
+    display: flex; /* Add flex display */
+    flex-direction: column; /* Arrange children vertically */
+    text-align: center;
+}
+
+.featured_book_card:hover {
+    background-color: #f5f5f5; /* Change to desired hover color */
+}
+
+.featured_book_card img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.featured_book_tag {
+    padding: 15px;
+}
+
+h2 {
+    margin: 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.writer {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+.message-container {
+    margin: 20px; /* This centers the div horizontally */
+    text-align: center;
+}

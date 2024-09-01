@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommended Books</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+    }
+
+    h1 {
+        text-align: center;
+        padding: 20px 0;
+        color: #333;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .featured_book_card {
+        margin: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        transition: background-color 0.3s ease;
+        border: 1px solid #000; /* Add border property */
+        display: flex; /* Add flex display */
+        flex-direction: column; /* Arrange children vertically */
+        text-align: center;
+    }
+
+    .featured_book_card:hover {
+        background-color: #f5f5f5; /* Change to desired hover color */
+    }
+
+    .featured_book_card img {
+        width: 100%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .featured_book_tag {
+        padding: 15px;
+    }
+
+    h2 {
+        margin: 0;
+        color: #333;
+        font-size: 18px;
+    }
+
+    .writer {
+        margin: 5px 0;
+        color: #666;
+        font-size: 14px;
+    }
+</style>
+<body>
+    <h1>Recommended Books</h1>
+    <ul>
+        {% if lien1 and Autor1 and tit1%}
+        <div class="featured_book_card">
+            <div class="featurde_book_img">
+                <img src="{{ lien1 }}" alt="Image">
+            </div>
+            <div class="featurde_book_tag">
+                <h2>Course 1</h2>
+                <p class="writer">Title : {{ tit1 }}</p>
+                <p class="writer">Auteur : {{ Autor1 }}</p>
+            </div>               
+        </div>
+        {% endif %}
+
+        {% if lien2 and Autor2 and tit2%}
+        <div class="featured_book_card">
+            <div class="featurde_book_img">
+                <img src="{{ lien2 }}" alt="Image">
+            </div>
+            <div class="featurde_book_tag">
+                <h2>Course 2</h2>
+                <p class="writer">Title : {{ tit2 }}</p>
+                <p class="writer">Auteur : {{ Autor2 }}</p>
+            </div>               
+        </div>
+        {% endif %}
+        {% if lien3 and Autor3 and tit1%}
+        <div class="featured_book_card">
+            <div class="featurde_book_img">
+                <img src="{{ lien3 }}" alt="Image">
+            </div>
+            <div class="featurde_book_tag">
+                <h2>Course 3</h2>
+                <p class="writer">Title : {{ tit3 }}</p>
+                <p class="writer">Auteur : {{ Autor3 }}</p>
+            </div>               
+        </div>
+        {% endif %}
+        {% if lien4 and Autor4 and tit4%}
+        <div class="featured_book_card">
+            <div class="featurde_book_img">
+                <img src="{{ lien4 }}" alt="Image">
+            </div>
+            <div class="featurde_book_tag">
+                <h2>Course 4</h2>
+                <p class="writer">Title : {{ tit4 }}</p>
+                <p class="writer">Auteur : {{ Autor4 }}</p>
+            </div>               
+        </div>
+        {% endif %}
+        {% if lien5 and Autor5 and tit5%}
+        <div class="featured_book_card">
+            <div class="featurde_book_img">
+                <img src="{{ lien5 }}" alt="Image">
+            </div>
+            <div class="featurde_book_tag">
+                <h2>Course 5</h2>
+                <p class="writer">Title : {{ tit5 }}</p>
+                <p class="writer">Auteur : {{ Autor5 }}</p>
+            </div>               
+        </div>
+        {% endif %}
+        {% if lien6 and Autor6 and tit6%}
+        <div class="featured_book_card">
+            <div class="featurde_book_img">
+                <img src="{{ lien6 }}" alt="Image">
+            </div>
+            <div class="featurde_book_tag">
+                <h2>Course 6</h2>
+                <p class="writer">Title : {{ tit6 }}</p>
+                <p class="writer">Auteur : {{ Autor6 }}</p>
+            </div>               
+        </div>
+        {% endif %}
+        {% if lien1 and Autor7 and tit7%}
+        <div class="featured_book_card">
+            <div class="featurde_book_img">
+                <img src="{{ lien7 }}" alt="Image">
+            </div>
+            <div class="featurde_book_tag">
+                <h2>Course 7</h2>
+                <p class="writer">Title : {{ tit7 }}</p>
+                <p class="writer">Auteur : {{ Autor7 }}</p>
+            </div>               
+        </div>
+        {% endif %}
+        {% if lien8 and Autor8 and tit8%}
+        <div class="featured_book_card">
+            <div class="featurde_book_img">
+                <img src="{{ lien8 }}" alt="Image">
+            </div>
+            <div class="featurde_book_tag">
+                <h2>Course 8</h2>
+                <p class="writer">Title : {{ tit8 }}</p>
+                <p class="writer">Auteur : {{ Autor8 }}</p>
+            </div>               
+        </div>
+        {% endif %}
+        {% if lien9 and Autor9 and tit9%}
+        <div class="featured_book_card">
+            <div class="featurde_book_img">
+                <img src="{{ lien9 }}" alt="Image">
+            </div>
+            <div class="featurde_book_tag">
+                <h2>Course 9</h2>
+                <p class="writer">Title : {{ tit9 }}</p>
+                <p class="writer">Auteur : {{ Autor9 }}</p>
+            </div>               
+        </div>
+        {% endif %}
+        {% if lien0 and Autor0 and tit0%}
+        <div class="featured_book_card">
+            <div class="featurde_book_img">
+                <img src="{{ lien0 }}" alt="Image">
+            </div>
+            <div class="featurde_book_tag">
+                <h2>Course 10</h2>
+                <p class="writer">Title : {{ tit0 }}</p>
+                <p class="writer">Auteur : {{ Autor0 }}</p>
+            </div>               
+        </div>
+        {% endif %}
+    </ul>
+</body>
+</html>

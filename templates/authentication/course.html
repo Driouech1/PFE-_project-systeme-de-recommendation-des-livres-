@@ -1,0 +1,331 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store Website</title> 
+    <link rel="stylesheet" href="{% static 'css/stylepagebook.css' %}">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="banner">
+        <div class="bar">
+            <img src="{% static 'css/logo.jpg' %}" alt="Image" class="logo">
+            <nav>
+                <div class="nav-link" id="navlinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                        <ul> 
+                            <li><a href="/home_page">home</a></li>
+                            <li><a href="about_us.php">about</a></li>
+                            <li><a href="/course">courses</a></li>
+                            <li><a href="/platformes">platform</a></li>
+                        </ul>
+                    <i class="fa fa-bars" onclick="showMenu()"></i>
+                </div>
+            </nav>
+        </div>
+    <!--Books-->
+    <div class="featured_boks">
+        <h1>Stories about violence against women </h1>
+        <h1> to help break the silence and end this global injustice</h1><br><br><br><br>
+        <div class="featured_book_box">
+            <div class="featured_book_card">
+                <div class="featurde_book_img">
+                    
+                    <img src="{% static 'css/book_1.jpg' %}">
+                </div>
+                <div class="featurde_book_tag">
+                    <h2>Course 1</h2>
+                    <p class="writer">Deborah Casey</p>
+                    <div class="categories">Thriller, Horror, Romance</div>
+                    <p class="book_price">$12.99<sub><del>$19.99</del></sub></p>
+                    <a href="https://www.udemy.com/course/domestic-abuse-and-violence/?couponCode=ST22FS22724" class="f_btn">Learn More</a>
+                </div>               
+            </div>
+            <div class="featured_book_card">
+                <div class="featurde_book_img">
+                    <img src="{% static 'css/book_2.jpg' %}">
+                </div>
+                <div class="featurde_book_tag">
+                    <h2>Course 2</h2>
+                    <p class="writer">Honour, Violence, Women and Islam</p>
+                    <div class="categories">Psychology of Domestic Violence</div>
+                    <p class="book_price">$51.99<sub><del>$59.99</del></sub></p>
+                    <a href="https://www.routledge.com/Honour-Violence-Women-and-Islam/Idriss-Abbas/p/book/9780415697798" class="f_btn">Learn More</a>
+                </div>               
+            </div>
+            <div class="featured_book_card">
+                <div class="featurde_book_img">
+                    <img src="{% static 'css/img/book_4.jpg' %}">
+                </div>
+                <div class="featurde_book_tag">
+                    <h2>Course 3</h2>
+                    <p class="writer">Feminist Advocacy</p>
+                    <div class="categories">Mahnaz Akhami</div>
+                    <p class="book_price">$39.99<sub><del>$49.99</del></sub></p>
+                    <a href="https://www.routledge.com/Feminist-Advocacy-Family-Law-and-Violence-against-Women-International-Perspectives/Akhami-Erturk-Mayer/p/book/9781138344938" class="f_btn">Learn More</a>
+                </div>               
+            </div>
+            <div class="featured_book_card">
+                <div class="featurde_book_img">
+                    <img src="{% static 'css/img/book3.jpg' %}">
+                </div>
+                <div class="featurde_book_tag">
+                    <h2>Course 4</h2>
+                    <p class="writer">Nicole Westmarland, Hannah Bows</p>
+                    <div class="categories">Social Sciences, Humanities</div><br>
+                    <a href="https://www.routledge.com/Researching-Gender-Violence-and-Abuse-Theory-Methods-Action/Westmarland-Bows/p/book/9781138641266" class="f_btn">Learn More</a>
+                </div>               
+            </div>
+            <div class="featured_book_card">
+                <div class="featurde_book_img">
+                    <img src="{% static 'css/img/book_5.jpg' %}">
+                </div>
+                <div class="featurde_book_tag">
+                    <h2>Course 5</h2>
+                    <p class="writer">Gender, Violence and Attitudes</p>
+                    <div class="categories">Lessons from Early Modern </div>
+                    <p class="book_price">$36.99<sub><del>$40.99</del></sub></p>
+                    <a href="https://www.routledge.com/Gender-Violence-and-Attitudes-Lessons-from-Early-Modern-Europe/Lidman/p/book/9781138097063" class="f_btn">Learn More</a>
+                </div>               
+            </div>
+            <div class="featured_book_card">
+                <div class="featurde_book_img">
+                    <img src="{% static 'css/img/book_6.jpg' %}">
+                </div>
+                <div class="featurde_book_tag">
+                    <h2>Course 6</h2>
+                    <p class="writer">Trans Lives in a Globalizing World</p>
+                    <div class="categories">J. Michael Ryan</div><br>
+                    <a href="https://www.routledge.com/Trans-Lives-in-a-Globalizing-World-Rights-Identities-and-Politics/Ryan/p/book/9780367193348" class="f_btn">Learn More</a>
+                </div>               
+            </div>
+            <div class="featured_book_card">
+                <div class="featurde_book_img">
+                    <img src="{% static 'css/img/book_7.jpg' %}">
+                </div>
+                <div class="featurde_book_tag">
+                    <h2>Course 7</h2>
+                    <p class="writer">What Is to Be Done About Violence Against Women</p>
+                    <div class="categories">Kate Fitz-Gibbon</div><br>
+                    <a href="https://www.routledge.com/What-Is-to-Be-Done-About-Violence-Against-Women-Gendered-Violences-in-the-Twenty-first-Century/Fitz-Gibbon-Walklate/p/book/9781032162577" class="f_btn">Learn More</a>
+                </div>               
+            </div>
+           
+            <div class="featured_book_card">
+                <div class="featurde_book_img">
+                    <img src="{% static 'css/img/book_8.webp' %}">
+                </div>
+                <div class="featurde_book_tag">
+                    <h2>Course 8</h2>
+                    <p class="writer">Violence Against Women and the Law</p>
+                    <div class="categories">David L Richards</div><br>
+                    <a href="https://www.routledge.com/Violence-Against-Women-and-the-Law/Richards-Haglund/p/book/9781612051482" class="f_btn">Learn More</a>
+                </div>               
+            </div>
+        </div>
+    </div>  
+    <!--Arrivals-->
+    <div class="arrivals">
+        <h1>Women Book</h1>
+        <div class="arrivals_box">
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="{% static 'css/img/MB1.jpg' %}">
+                </div>
+                <div class="arrivals_tag">
+                    <p>Men's Work in Preventing</p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="https://www.routledge.com/Mens-Work-in-Preventing-Violence-Against-Women/Neuger-Poling/p/book/9780789021724" class="arrivals_btn">Learn More</a>
+                </div>
+            </div>
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="{% static 'css/img/MB2.webp' %}">
+                </div>
+                <div class="arrivals_tag">
+                    <p>Experiences and Lessonss</p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="https://www.routledge.com/Violence-Against-Women-in-Legally-Plural-settings-Experiences-and-Lessons-from-the-Andes/Barrera/p/book/9781138092815" class="arrivals_btn">Learn More</a>
+                </div>
+            </div>
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="{% static 'css/img/MB3.webp' %}">
+                </div>
+                <div class="arrivals_tag">
+                    <p>Violence in the Lives</p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="https://www.routledge.com/Violence-in-the-Lives-of-Black-Women-Battered-Black-and-Blue/West/p/book/9780789019950" class="arrivals_btn">Learn More</a>
+                </div>
+            </div>
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                <img src="{% static 'css/img/MB4.webp' %}">
+                </div>
+                <div class="arrivals_tag">
+                    <p>Violence and Social Change </p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="https://www.routledge.com/Women-Violence-and-Social-Change/Dobash-Dobash/p/book/9780415036108" class="arrivals_btn">Learn More</a>
+                </div>
+            </div>
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="{% static 'css/img/MB5.jpg' %}">
+                </div>
+                <div class="arrivals_tag">
+                    <p>Women in Asian Societies </p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="https://www.routledge.com/Violence-Against-Women-in-Asian-Societies-Gender-Inequality-and-Technologies-of-Violence/Bennett-Manderson/p/book/9780700717422" class="arrivals_btn">Learn More</a>
+                </div>
+            </div>
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="{% static 'css/img/MB6.jpg' %}">
+                </div>
+                <div class="arrivals_tag">
+                    <p>Perspectives on men’s</p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="https://www.routledge.com/Violence-against-Women-Criminological-perspectives-on-mens-violences/Westmarland/p/book/9781843923985" class="arrivals_btn">Learn More</a>
+                </div>
+            </div>
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="{% static 'css/img/MB7.jpg' %}">
+                </div>
+                <div class="arrivals_tag">
+                    <p>Domestic Violence</p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="https://www.routledge.com/Women-and-Domestic-Violence-An-Interdisciplinary-Approach/Feder/p/book/9780789006752" class="arrivals_btn">Learn More</a>
+                </div>
+            </div>
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="{% static 'css/img/MB8.jpg' %}">
+                </div>
+                <div class="arrivals_tag">
+                    <p>War, Violence Learning</p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="https://www.routledge.com/Women-War-Violence-and-Learning/Mojab/p/book/9780415633963" class="arrivals_btn">Learn More</a>
+                </div>
+            </div>
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="{% static 'css/img/MB9.jpg' %}">
+                </div>
+                <div class="arrivals_tag">
+                    <p>Treatment for Abusive </p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="https://www.routledge.com/Domestic-Violence-Treatment-for-Abusive-Women-A-Treatment-Manual/Bowen/p/book/9780789038111" class="arrivals_btn">Learn More</a>
+                </div>
+            </div>
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="{% static 'css/img/MB10.jpg' %}">
+                </div>
+                <div class="arrivals_tag">
+                    <p> Courage to Fight Violence </p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="https://www.routledge.com/The-Courage-to-Fight-Violence-Against-Women-Psychoanalytic-and-Multidisciplinary-Perspectives/Ellman-Goodman/p/book/9781782204732" class="arrivals_btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <footer>
+        <div class="footer_main">
+
+            <div class="tag">
+            </div>
+            <div class="tag">
+                <h1>Quick Link</h1>
+                <a href="course.php">Home</a>
+                <a href="#">About</a>
+                <a href="course.php">Book</a>
+            </div>
+            <div class="tag">
+                <h1>Contact Info</h1>
+                <a href="#"><i class="fa-solid fa-phone"></i>+212 ** *** *** </a>
+                <a href="#"><i class="fa-solid fa-phone"></i>+212 ** *** ***</a>
+                <a href="#"><i class="fa-solid fa-envelope"></i>violence.women@gmail.com</a>
+            </div>
+            <div class="tag">
+                <h1>Follow Us</h1>
+                <div class="social_link">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div>
+            <div class="tag">
+                             
+            </div>            
+        </div>
+        <p class="end">All rights are save</p>
+    </footer>
+</div>
+</body>
+</html>

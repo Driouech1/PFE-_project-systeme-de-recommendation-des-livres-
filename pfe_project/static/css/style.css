@@ -1,0 +1,78 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(270deg, #e87777, #e3c19f, #e4e49b, #a1e8a1, #8989e2, #c9a2f0, #eccbec, #f0b9d5);
+
+}
+.form {
+    background-color: #fff;
+    width: 400px;
+    margin: 100px auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(0 0 0 / 40%);
+    border: 1px solid #070606;
+
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(0 0 0 / 40%);
+    border: 1px solid #070606;
+}
+h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+.close {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+.close:hover {
+    color: #999;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #0056b3;
+}
+button a {
+    text-decoration: none;
+    color: inherit;
+}
+button a:hover {
+    text-decoration: none;
+    color: inherit;
+}

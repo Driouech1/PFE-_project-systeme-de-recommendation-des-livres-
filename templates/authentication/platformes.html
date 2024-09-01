@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store Website</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/stylepageplatform.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="banner">
+        <div class="bar">
+            <img src="{% static 'css/lzogo.png' %}" alt="Image" class="logo">
+            <nav>
+                <div class="nav-link" id="navlinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                        <ul> 
+                            <li><a href="main.php">HOME</a></li>
+                            <li><a href="">ABOUT</a></li>
+                            <li><a href="course.php">Book</a></li>                
+                            <li><a href="">INFORMATION</a></li>
+                        </ul>
+                    <i class="fa fa-bars" onclick="showMenu()"></i>
+                </div>
+            </nav>
+        </div> 
+    <div class="arrivals">
+        <p></p><br>
+        <h1>Women Platforms</h1>
+        <div class="arrivals_box">
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="{% static 'css/plat.jpg' %}" >
+                </div>
+                <div class="arrivals_tag">
+                    <p>unwohbmen</p><br>
+                        <a href="https://www.unwomen.org/fr" class="arrivals_btn">Learn More</a>
+                </div>
+            </div>
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="{% static 'css/GW.png' %}" >
+                </div>
+                <div class="arrivals_tag">
+                    <p>Global Fund for Women</p><br>
+                    <a href="https://www.globalfundforwomen.org/" class="arrivals_btn">Learn More</a>
+                </div>
+            </div>
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="{% static 'css/RAINN.png' %}" >
+                </div>
+                <div class="arrivals_tag">
+                    <p>RAINN</p><br>
+                    
+                    <a href="https://www.rainn.org/" class="arrivals_btn">Learn More</a>
+                </div>
+            </div>
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                <img src="{% static 'css/the_p_p.jpeg' %}" >
+
+                </div>
+                <div class="arrivals_tag">
+                    <p>The Pixel Project</p><br>
+                    <a href="https://www.thepixelproject.net/" class="arrivals_btn">Learn More</a>
+                </div>
+            </div>
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="{% static 'css/F_W_V.jpg' %}" >
+                </div>
+                <div class="arrivals_tag">
+                    <p>Futures Without Violence</p><br>                    
+                    <a href="https://www.futureswithoutviolence.org/" class="arrivals_btn">Learn More</a>
+                </div>
+            </div><br>
+                       
+    </div>
+    <!--Footer-->
+    <footer>
+        <div class="footer_main">
+
+            <div class="tag">
+            </div>
+            <div class="tag">
+                <h1>Quick Link</h1>
+                <a href="course.php">Home</a>
+                <a href="#">About</a>
+                <a href="course.php">Book</a>
+            </div>
+            <div class="tag">
+                <h1>Contact Info</h1>
+                <a href="#"><i class="fa-solid fa-phone"></i>+212 ** *** *** </a>
+                <a href="#"><i class="fa-solid fa-phone"></i>+212 ** *** ***</a>
+                <a href="#"><i class="fa-solid fa-envelope"></i>violence.women@gmail.com</a>
+            </div>
+            <div class="tag">
+                <h1>Follow Us</h1>
+                <div class="social_link">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div>
+            <div class="tag">
+                             
+            </div>            
+        </div>
+        <p class="end">All rights are save</p>
+    </footer>
+</div>
+</body>
+</html>
